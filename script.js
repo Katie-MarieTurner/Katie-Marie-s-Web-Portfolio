@@ -122,6 +122,9 @@ const webProject = document.querySelector(".PORTFOLIO");
 
 webProject.addEventListener("mouseenter", () => {
     if (!document.querySelector("#webProject")) {
+        const a = document.createElement("a");
+        a.href = "./webPortfolio.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/webProjectIMG.jpg";
         img.id = "webProject";
@@ -134,7 +137,8 @@ webProject.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        webProject.appendChild(img);
+        webProject.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -155,6 +159,9 @@ const toDoList = document.querySelector(".TO-DO");
 
 toDoList.addEventListener("mouseenter", () => {
     if (!document.querySelector("#toDoList")) {
+        const a = document.createElement("a");
+        a.href = "./toDo.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/toDoListIMG.jpg";
         img.id = "toDoList";
@@ -167,7 +174,8 @@ toDoList.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        toDoList.appendChild(img);
+        toDoList.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -188,6 +196,9 @@ const solarSystemModel = document.querySelector(".SOLAR");
 
 solarSystemModel.addEventListener("mouseenter", () => {
     if (!document.querySelector("#solarSystemModel")) {
+                const a = document.createElement("a");
+        a.href = "./solarSystemModel.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/solarSystemModelIMG.jpg";
         img.id = "solarSystemModel";
@@ -200,7 +211,8 @@ solarSystemModel.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        solarSystemModel.appendChild(img);
+        solarSystemModel.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -221,6 +233,9 @@ const owlDatabase = document.querySelector(".DATABASE");
 
 owlDatabase.addEventListener("mouseenter", () => {
     if (!document.querySelector("#owlDatabase")) {
+                const a = document.createElement("a");
+        a.href = "./owlDatabase.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/owlDatabaseIMG.jpg";
         img.id = "owlDatabase";
@@ -233,7 +248,8 @@ owlDatabase.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        owlDatabase.appendChild(img);
+        owlDatabase.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -254,6 +270,9 @@ const palindromeChecker = document.querySelector(".PALINDROME");
 
 palindromeChecker.addEventListener("mouseenter", () => {
     if (!document.querySelector("#palindromeChecker")) {
+                const a = document.createElement("a");
+        a.href = "./python.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/palindromeCheckerIMG.jpg";
         img.id = "palindromeChecker";
@@ -266,7 +285,8 @@ palindromeChecker.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        palindromeChecker.appendChild(img);
+        palindromeChecker.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -287,6 +307,9 @@ const RPS = document.querySelector(".RPS");
 
 RPS.addEventListener("mouseenter", () => {
     if (!document.querySelector("#RPS")) {
+                const a = document.createElement("a");
+        a.href = "./python.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/RPSIMG.jpg";
         img.id = "RPS";
@@ -299,7 +322,8 @@ RPS.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        RPS.appendChild(img);
+        RPS.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -320,6 +344,9 @@ const HoL = document.querySelector(".HOL");
 
 HoL.addEventListener("mouseenter", () => {
     if (!document.querySelector("#HoL")) {
+                const a = document.createElement("a");
+        a.href = "./python.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/HoLIMG.jpg";
         img.id = "HoL";
@@ -332,7 +359,8 @@ HoL.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        HoL.appendChild(img);
+        HoL.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
@@ -353,6 +381,9 @@ const quiz = document.querySelector(".QUIZ");
 
 quiz.addEventListener("mouseenter", () => {
     if (!document.querySelector("#quiz")) {
+                const a = document.createElement("a");
+        a.href = "./quiz.html"
+        a.target = "_blank"
         const img = document.createElement("img");
         img.src = "webProjectIMGs/quizIMG.jpg";
         img.id = "quiz";
@@ -365,7 +396,8 @@ quiz.addEventListener("mouseenter", () => {
         img.style.height = "100%";
         img.style.objectFit = "cover";
         img.style.zIndex = "-3"
-        quiz.appendChild(img);
+        quiz.appendChild(a)
+        a.appendChild(img);
     } else {
         console.log("The element exists. Proceeding with further logic.");
     }
