@@ -106,8 +106,7 @@ h1{
     font-size: 2rem
 }
 .sceneContainer{
-    height: 100%;
-    width: 100%;
+    display: grid;
     grid-column-start: 2 ;
     grid-column-end: 4 ;
     grid-row-start: 1 ;
@@ -172,11 +171,13 @@ h1{
     animation: cloudfloat 10s ease 0s infinite;
 }
 .moon{
+    box-shadow:
+    0 0 60px 1px var(--moon-color);
     z-index: 0;
     grid-column-start: 4 ;
     grid-column-end: 11 ;
     grid-row-start: 2 ;
-    grid-row-end: 10 ;
+    grid-row-end: 11 ;
     border-radius: 50%;
     background-color: var(--moon-color);
 }
@@ -419,19 +420,20 @@ h1{
 
 /* ! == ABOUT PAGE == ! */
 .aboutWrapper{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 .aboutBackground{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     justify-content: center;
-    align-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 20vh 3fr;
+    overflow-y: hidden;
 }
 h2{
+    align-self: center;
     margin-left: auto;
     margin-right: auto;
     font-size: 5rem;
@@ -450,9 +452,19 @@ h2{
     display: flex;
     justify-content: center;
 }
+.aboutProjectContainer{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    grid-row-start: 2 ;
+    grid-row-end: 3 ;
+    display: flex;
+    justify-content: center;
+}
 .slidePage{
     background-color: var(--text-color);
-    height: 80vh;
+    height: 100%;
     width: 50%;
     display: grid;
     justify-items: center;
@@ -677,6 +689,15 @@ h4{
 }
 .projectSpacer{
     margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+    background-color: var(--accent-color);
+    height: 3px;
+    width: 80%;
+}
+.depthProjectSpacer{
+    margin-top: 10px;
+    padding: 1px;
     margin-bottom: 10px;
     align-self: center;
     background-color: var(--accent-color);
@@ -988,8 +1009,8 @@ h4{
     }
     #home, #about, #projects{
         scroll-snap-align: center;
-        width: 100%;
         height: 100vh;
+        width: 100vw;
     }
     ::-webkit-scrollbar{
         display: none;
@@ -1149,19 +1170,27 @@ h4{
         grid-column-end: 5 ;
     }
     .aboutWrapper{
+        overflow-x: hidden;
         height: 100vh;
+        width: 100vw;
     }
     .aboutBackground{
+        overflow-x: hidden;
         height: 100vh;
-        grid-template-columns: 1fr;
+        width: 100vw;
+        grid-template-columns: 100vw;
         grid-template-rows: 15vh 1fr;
     }
     h2{
-        width: 100vw;
+        width: 100%;
         font-size: 3rem;
+        overflow-x: hidden;
+        grid-column-start: 1 ;
+        grid-column-end: 2 ;
+        grid-row-start: 1 ;
+        grid-row-end: 2 ;
     }
     .aboutContainer{
-        width: 100vw;
         height: min-content;
         display: flex;
         justify-content: center;
@@ -1218,12 +1247,12 @@ h4{
         grid-row-end: 2 ;
     }
     h3{
-        margin-top: 2vh;
+        margin-top: 1vh;
         font-size: 1.2rem
     }
     .spacer{
         margin-top: 5%;
-        height: 0.5%;
+        padding: 1px;
         width: 45%;
     }
     .aboutTextbox{
@@ -1234,6 +1263,7 @@ h4{
         width: 90%;
     }
     .h3_p, .about_p{
+        padding: 1%;
         font-size: 0.8rem;
     }
     .about_p{
@@ -1244,7 +1274,7 @@ h4{
         font-size: 0.8rem;
     }
     .CV{
-        margin-top: 5vh;
+        margin-top: 2vh;
         padding-left: 10%;
         padding-top: 3%;
         padding-right: 30%;
@@ -1381,6 +1411,14 @@ h4{
         height: 20%;
         width: 30%;
         object-fit: cover;
+    }
+    .aboutProjectContainer{
+        width: 100% ;
+        height: 98vh ;
+        grid-column-start: 1 ;
+        grid-column-end: 2 ;
+        grid-row-start: 2 ;
+        grid-row-end: 3 ;
     }
 
 
@@ -1534,5 +1572,22 @@ h4{
     75% {
         transform: translateY(-30%);
     }
+}
+.invisible {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 1.5s, transform 0.5s ease-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slideStart {
+    transform: translateY(30vh);
+    transition: transform 1s ease-out;
+}
+.slideEnd {
+    transform: translateY(0);
 }
 }
